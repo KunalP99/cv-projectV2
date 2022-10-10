@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap");
+body {
+  background-color: #f2f4f3;
+}
+
+.main-container {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}/*# sourceMappingURL=app.css.map */

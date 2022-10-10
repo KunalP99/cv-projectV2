@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap");
+@import "./variables";
+
+body {
+  background-color: $main-background-color;
+}
+
+.main-container {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}

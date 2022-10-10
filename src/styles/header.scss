@@ -1,0 +1,18 @@
+@import "./variables";
+
+header {
+  background-color: $header-colour;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.7rem;
+  }
+}

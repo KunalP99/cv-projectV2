@@ -1,0 +1,11 @@
+@import "./variables";
+
+#form {
+  width: 700px;
+  background-color: $form-background-color;
+  padding: 30px;
+
+  h2 {
+    color: white;
+  }
+}
