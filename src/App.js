@@ -4,16 +4,26 @@ import Header from "./components/Header";
 import Form from "./components/Form";
 import CV from "./components/CV";
 import "./styles/app.css";
+import uniqid from "uniqid";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      fName: "",
-      lName: "",
-      phoneNum: "",
-      email: "",
+      personal: {
+        fName: "",
+        lName: "",
+        phoneNum: "",
+        email: "",
+      },
+      education: {
+        arr: [],
+        id: uniqid(),
+        schoolName: "",
+        titleStudy: "",
+        dateStudy: "",
+      },
     };
 
     this.personalInfoUpdate = this.personalInfoUpdate.bind(this);
@@ -26,15 +36,16 @@ class App extends React.Component {
     const email = document.getElementById("email").value;
 
     this.setState({
-      fName,
-      lName,
-      phoneNum,
-      email,
+      personal: {
+        fName,
+        lName,
+        phoneNum,
+        email,
+      },
     });
-
-    console.log(fName);
-    console.log(lName);
   }
+
+  educationInfoUpdate(e) {}
 
   render() {
     return (
@@ -43,10 +54,13 @@ class App extends React.Component {
         <div className="main-content">
           <Form personalInfoUpdate={this.personalInfoUpdate} />
           <CV
-            fName={this.state.fName}
-            lName={this.state.lName}
-            phoneNum={this.state.phoneNum}
-            email={this.state.email}
+            fName={this.state.personal.fName}
+            lName={this.state.personal.lName}
+            phoneNum={this.state.personal.phoneNum}
+            email={this.state.personal.email}
+            schoolName={this.state.education.schoolName}
+            titleStudy={this.state.education.titleStudy}
+            dateStudy={this.state.education.dateStudy}
           />
         </div>
       </div>

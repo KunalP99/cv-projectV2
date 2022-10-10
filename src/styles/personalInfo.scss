@@ -1,12 +1,11 @@
+@import "./variables";
+
 .personal-information {
   display: flex;
   flex-direction: column;
   gap: 10px;
 
   input {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
+    @include input-style;
   }
 }

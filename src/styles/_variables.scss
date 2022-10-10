@@ -7,3 +7,10 @@ $dates-colour: #3c3c3b;
 // Button
 $add-button-colour: #00cc99;
 $red-button-colour: #dd1155;
+
+@mixin input-style {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}

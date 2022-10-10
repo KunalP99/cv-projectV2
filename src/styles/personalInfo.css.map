@@ -1,1 +1,1 @@
-{"version":3,"sources":["personalInfo.scss","personalInfo.css"],"names":[],"mappings":"AAAA;EACE,aAAA;EACA,sBAAA;EACA,SAAA;ACCF;ADCE;EACE,aAAA;EACA,YAAA;EACA,kBAAA;EACA,eAAA;ACCJ","file":"personalInfo.css"}
+{"version":3,"sources":["personalInfo.scss","personalInfo.css","_variables.scss"],"names":[],"mappings":"AAEA;EACE,aAAA;EACA,sBAAA;EACA,SAAA;ACDF;ADGE;EEIA,aAAA;EACA,YAAA;EACA,kBAAA;EACA,eAAA;ADJF","file":"personalInfo.css"}

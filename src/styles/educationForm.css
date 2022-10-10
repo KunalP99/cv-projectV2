@@ -1,0 +1,23 @@
+.education-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.education-form input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.education-add-btn {
+  margin-bottom: 40px;
+}
+
+.education-add-circle {
+  width: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}/*# sourceMappingURL=educationForm.css.map */
