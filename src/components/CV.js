@@ -3,13 +3,6 @@ import EducationCV from "./EducationCV";
 import "../styles/cv.css";
 
 export default class CV extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      educationCV: [<EducationCV schoolName={this.props.schoolName} />],
-    };
-  }
   render() {
     return (
       <div className="cv-container">
@@ -20,7 +13,13 @@ export default class CV extends React.Component {
           <p>{this.props.email}</p>
           <p>{this.props.phoneNum}</p>
         </div>
-        <div className="cv-education">{this.state.educationCV}</div>
+        <div className="cv-education">
+          {/* Need CV containers to go here. So a list of containers, with definite values,  */}
+          {this.props.arrEducation.map((container) => {
+            return container;
+          })}
+          <EducationCV schoolName={this.props.schoolName} />
+        </div>
       </div>
     );
   }

@@ -24,7 +24,11 @@ export default class EducationForm extends React.Component {
           name="date-study"
           placeholder="Date of Study"
         />
-        <button type="button" className="education-add-btn green-btn">
+        <button
+          onClick={this.props.educationInfoUpdate}
+          type="button"
+          className="education-add-btn green-btn"
+        >
           Add
         </button>
       </div>

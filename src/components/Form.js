@@ -11,7 +11,7 @@ export default class Form extends React.Component {
           personalInfoUpdate={this.props.personalInfoUpdate}
         />
         <div className="education-container">
-          <Education />
+          <Education educationInfoUpdate={this.props.educationInfoUpdate} />
         </div>
       </form>
     );

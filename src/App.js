@@ -3,6 +3,7 @@ import React from "react";
 import Header from "./components/Header";
 import Form from "./components/Form";
 import CV from "./components/CV";
+import EducationCV from "./components/EducationCV";
 import "./styles/app.css";
 import uniqid from "uniqid";
 
@@ -18,15 +19,15 @@ class App extends React.Component {
         email: "",
       },
       education: {
-        arr: [],
-        id: uniqid(),
         schoolName: "",
         titleStudy: "",
         dateStudy: "",
       },
+      arrEducation: [],
     };
 
     this.personalInfoUpdate = this.personalInfoUpdate.bind(this);
+    this.educationInfoUpdate = this.educationInfoUpdate.bind(this);
   }
 
   personalInfoUpdate() {
@@ -45,19 +46,35 @@ class App extends React.Component {
     });
   }
 
-  educationInfoUpdate(e) {}
+  educationInfoUpdate(e) {
+    let schoolNameVal = document.querySelector(".school-name").value;
+    this.setState((prevState) => ({
+      education: {
+        schoolName:
+          e.target.previousSibling.previousSibling.previousSibling.value,
+      },
+      arrEducation: [
+        ...prevState.arrEducation,
+        <EducationCV schoolName={this.state.education.schoolName} />,
+      ],
+    }));
+  }
 
   render() {
     return (
       <div className="main-container">
         <Header />
         <div className="main-content">
-          <Form personalInfoUpdate={this.personalInfoUpdate} />
+          <Form
+            personalInfoUpdate={this.personalInfoUpdate}
+            educationInfoUpdate={this.educationInfoUpdate}
+          />
           <CV
             fName={this.state.personal.fName}
             lName={this.state.personal.lName}
             phoneNum={this.state.personal.phoneNum}
             email={this.state.personal.email}
+            arrEducation={this.state.arrEducation}
             schoolName={this.state.education.schoolName}
             titleStudy={this.state.education.titleStudy}
             dateStudy={this.state.education.dateStudy}
