@@ -8,4 +8,11 @@
   input {
     @include input-style;
   }
+
+  button {
+    @include greenBtn;
+  }
+  button:hover {
+    background-color: $green-btn-hover-colour;
+  }
 }

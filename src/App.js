@@ -47,15 +47,24 @@ class App extends React.Component {
   }
 
   educationInfoUpdate(e) {
-    let schoolNameVal = document.querySelector(".school-name").value;
+    let schoolName = document.querySelector(".school-name").value;
+    let titleStudy = document.querySelector(".title-study").value;
+    let dateStudy = document.querySelector(".date-study").value;
+
     this.setState((prevState) => ({
       education: {
-        schoolName:
-          e.target.previousSibling.previousSibling.previousSibling.value,
+        schoolName,
+        titleStudy,
+        dateStudy,
       },
+      // Copies the previous state of the array and adds on the new item after it
       arrEducation: [
         ...prevState.arrEducation,
-        <EducationCV schoolName={this.state.education.schoolName} />,
+        <EducationCV
+          schoolName={this.state.education.schoolName}
+          titleStudy={this.state.education.titleStudy}
+          dateStudy={this.state.education.dateStudy}
+        />,
       ],
     }));
   }
@@ -69,6 +78,7 @@ class App extends React.Component {
             personalInfoUpdate={this.personalInfoUpdate}
             educationInfoUpdate={this.educationInfoUpdate}
           />
+          {/* All these values are passed to the CV component to be displayed on screen */}
           <CV
             fName={this.state.personal.fName}
             lName={this.state.personal.lName}

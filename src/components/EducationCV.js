@@ -4,7 +4,11 @@ export default class EducationCV extends React.Component {
   render() {
     return (
       <div className="cv-education-content-container">
-        <p>{this.props.schoolName}</p>
+        <div className="school-title-container">
+          <p className="school-name-text">{this.props.schoolName}</p>
+          <p className="title-study-text">{this.props.titleStudy}</p>
+        </div>
+        <p className="date-study-text">{this.props.dateStudy}</p>
       </div>
     );
   }

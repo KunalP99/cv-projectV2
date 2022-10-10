@@ -1,7 +1,48 @@
 @import "./variables";
 
 .cv-container {
+  position: sticky;
+  top: 0;
   width: 700px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  padding: 30px;
+  height: 1000px;
+
+  .cv-header {
+    padding: 20px;
+    background-color: $cv-header-colour;
+    color: white;
+
+    h2 {
+      font-size: 2rem;
+    }
+  }
+
+  .cv-education {
+    padding: 20px;
+
+    h2 {
+      margin-bottom: -30px;
+    }
+
+    .cv-education-content-container {
+      display: flex;
+      justify-content: space-between;
+      // margin-top: -20px;
+    }
+
+    .school-title-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .school-name-text {
+      font-size: 1.3rem;
+    }
+
+    .title-study-text {
+      color: #7a7a7a;
+      margin-top: -10px;
+    }
+  }
 }

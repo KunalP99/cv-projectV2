@@ -9,15 +9,20 @@
   border-radius: 5px;
   font-size: 1rem;
 }
+.education-form button {
+  cursor: pointer;
+  background-color: #00cc99;
+  padding: 10px;
+  color: white;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.education-form button:hover {
+  background-color: #00a179;
+}
 
 .education-add-btn {
   margin-bottom: 40px;
-}
-
-.education-add-circle {
-  width: 50px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  cursor: pointer;
 }/*# sourceMappingURL=educationForm.css.map */

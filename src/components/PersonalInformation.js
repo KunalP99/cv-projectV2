@@ -21,7 +21,7 @@ export default class PersonalInformation extends React.Component {
           className="green-btn"
           id="personal-add-btn"
         >
-          Add
+          Update
         </button>
       </div>
     );

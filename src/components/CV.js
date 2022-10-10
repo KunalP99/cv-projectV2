@@ -14,11 +14,18 @@ export default class CV extends React.Component {
           <p>{this.props.phoneNum}</p>
         </div>
         <div className="cv-education">
-          {/* Need CV containers to go here. So a list of containers, with definite values,  */}
-          {this.props.arrEducation.map((container) => {
-            return container;
-          })}
-          <EducationCV schoolName={this.props.schoolName} />
+          <div>
+            <h2>{this.props.schoolName ? "Education" : ""}</h2>
+            {/* Maps over array to display container and updates every time an item is added to the array */}
+            {this.props.arrEducation.map((container) => {
+              return container;
+            })}
+            <EducationCV
+              schoolName={this.props.schoolName}
+              titleStudy={this.props.titleStudy}
+              dateStudy={this.props.dateStudy}
+            />
+          </div>
         </div>
       </div>
     );
