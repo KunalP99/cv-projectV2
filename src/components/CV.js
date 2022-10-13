@@ -24,7 +24,8 @@ export default class CV extends React.Component {
             <EducationCV
               schoolName={this.props.schoolName}
               titleStudy={this.props.titleStudy}
-              dateStudy={this.props.dateStudy}
+              studyDateFrom={this.props.studyDateFrom}
+              studyDateTo={this.props.studyDateTo}
             />
           </div>
         </div>

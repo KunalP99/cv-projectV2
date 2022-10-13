@@ -8,7 +8,13 @@ export default class EducationCV extends React.Component {
           <p className="school-name-text">{this.props.schoolName}</p>
           <p className="title-study-text">{this.props.titleStudy}</p>
         </div>
-        <p className="date-study-text">{this.props.dateStudy}</p>
+        <p className="date-study-text">
+          {this.props.studyDateFrom}
+          <strong>
+            {this.props.studyDateFrom ? " - " : console.log("no dates")}
+          </strong>
+          {this.props.studyDateTo}
+        </p>
       </div>
     );
   }

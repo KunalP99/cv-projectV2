@@ -12,6 +12,9 @@
   button {
     @include green-btn;
   }
+  button:hover {
+    background-color: $green-btn-hover-colour;
+  }
 
   label {
     color: white;

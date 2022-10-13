@@ -15,6 +15,14 @@
   button:hover {
     background-color: $green-btn-hover-colour;
   }
+
+  label {
+    color: white;
+  }
+
+  .study-dates-container {
+    @include dates-container;
+  }
 }
 
 .education-add-btn {

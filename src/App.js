@@ -21,7 +21,8 @@ class App extends React.Component {
       education: {
         schoolName: "",
         titleStudy: "",
-        dateStudy: "",
+        studyDateFrom: "",
+        studyDateTo: "",
       },
       work: {
         companyName: "",
@@ -58,13 +59,15 @@ class App extends React.Component {
   educationInfoUpdate(e) {
     let schoolName = document.querySelector(".school-name").value;
     let titleStudy = document.querySelector(".title-study").value;
-    let dateStudy = document.querySelector(".date-study").value;
+    let studyDateFrom = document.querySelector(".study-date-from").value;
+    let studyDateTo = document.querySelector(".study-date-to").value;
 
     this.setState((prevState) => ({
       education: {
         schoolName,
         titleStudy,
-        dateStudy,
+        studyDateFrom,
+        studyDateTo,
       },
       // Copies the previous state of the array and adds on the new item after it
       arrEducation: [
@@ -125,7 +128,8 @@ class App extends React.Component {
             arrEducation={this.state.arrEducation}
             schoolName={this.state.education.schoolName}
             titleStudy={this.state.education.titleStudy}
-            dateStudy={this.state.education.dateStudy}
+            studyDateFrom={this.state.education.studyDateFrom}
+            studyDateTo={this.state.education.studyDateTo}
             arrWork={this.state.arrWork}
             companyName={this.state.work.companyName}
             positionTitle={this.state.work.positionTitle}

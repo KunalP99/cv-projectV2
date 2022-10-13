@@ -18,12 +18,20 @@ export default class EducationForm extends React.Component {
           name="title-study"
           placeholder="Title of Study"
         />
-        <input
-          type="text"
-          className="date-study"
-          name="date-study"
-          placeholder="Date of Study"
-        />
+        <div className="study-dates-container">
+          <div>
+            <label>From: </label>
+            <input
+              type="date"
+              className="study-date-from"
+              name="study-date-from"
+            />
+          </div>
+          <div>
+            <label>To: </label>
+            <input type="date" className="study-date-to" name="study-date-to" />
+          </div>
+        </div>
         <button
           onClick={this.props.educationInfoUpdate}
           type="button"
