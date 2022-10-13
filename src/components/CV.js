@@ -1,5 +1,6 @@
 import React from "react";
 import EducationCV from "./EducationCV";
+import WorkCV from "./WorkCV";
 import "../styles/cv.css";
 
 export default class CV extends React.Component {
@@ -26,6 +27,19 @@ export default class CV extends React.Component {
               dateStudy={this.props.dateStudy}
             />
           </div>
+        </div>
+        <div className="cv-work">
+          <h2>{this.props.companyName ? "Work Experience" : ""}</h2>
+          {this.props.arrWork.map((container) => {
+            return container;
+          })}
+          <WorkCV
+            companyName={this.props.companyName}
+            positionTitle={this.props.positionTitle}
+            jobDesc={this.props.jobDesc}
+            workDateFrom={this.props.workDateFrom}
+            workDateTo={this.props.workDateTo}
+          />
         </div>
       </div>
     );

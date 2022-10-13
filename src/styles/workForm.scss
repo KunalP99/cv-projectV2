@@ -1,6 +1,6 @@
 @import "./variables";
 
-.education-form {
+.work-form {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -12,11 +12,13 @@
   button {
     @include green-btn;
   }
-  button:hover {
-    background-color: $green-btn-hover-colour;
-  }
-}
 
-.education-add-btn {
-  margin-bottom: 40px;
+  label {
+    color: white;
+    font-size: 1.1rem;
+  }
+
+  .work-dates-container {
+    @include dates-container;
+  }
 }

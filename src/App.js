@@ -4,8 +4,8 @@ import Header from "./components/Header";
 import Form from "./components/Form";
 import CV from "./components/CV";
 import EducationCV from "./components/EducationCV";
+import WorkCV from "./components/WorkCV";
 import "./styles/app.css";
-import uniqid from "uniqid";
 
 class App extends React.Component {
   constructor(props) {
@@ -23,11 +23,20 @@ class App extends React.Component {
         titleStudy: "",
         dateStudy: "",
       },
+      work: {
+        companyName: "",
+        positionTitle: "",
+        jobDesc: "",
+        workDateFrom: "",
+        workDateTo: "",
+      },
       arrEducation: [],
+      arrWork: [],
     };
 
     this.personalInfoUpdate = this.personalInfoUpdate.bind(this);
     this.educationInfoUpdate = this.educationInfoUpdate.bind(this);
+    this.workInfoUpdate = this.workInfoUpdate.bind(this);
   }
 
   personalInfoUpdate() {
@@ -69,6 +78,34 @@ class App extends React.Component {
     }));
   }
 
+  workInfoUpdate(e) {
+    let companyName = document.querySelector(".company-name").value;
+    let positionTitle = document.querySelector(".position-title").value;
+    let jobDesc = document.querySelector(".job-desc").value;
+    let workDateFrom = document.querySelector(".work-date-from").value;
+    let workDateTo = document.querySelector(".work-date-to").value;
+
+    this.setState((prevState) => ({
+      work: {
+        companyName,
+        positionTitle,
+        jobDesc,
+        workDateFrom,
+        workDateTo,
+      },
+      arrWork: [
+        ...prevState.arrWork,
+        <WorkCV
+          companyName={this.state.work.companyName}
+          positionTitle={this.state.work.positionTitle}
+          jobDesc={this.state.work.jobDesc}
+          workDateTo={this.state.work.workDateTo}
+          workDateFrom={this.state.work.workDateFrom}
+        />,
+      ],
+    }));
+  }
+
   render() {
     return (
       <div className="main-container">
@@ -77,6 +114,7 @@ class App extends React.Component {
           <Form
             personalInfoUpdate={this.personalInfoUpdate}
             educationInfoUpdate={this.educationInfoUpdate}
+            workInfoUpdate={this.workInfoUpdate}
           />
           {/* All these values are passed to the CV component to be displayed on screen */}
           <CV
@@ -88,6 +126,12 @@ class App extends React.Component {
             schoolName={this.state.education.schoolName}
             titleStudy={this.state.education.titleStudy}
             dateStudy={this.state.education.dateStudy}
+            arrWork={this.state.arrWork}
+            companyName={this.state.work.companyName}
+            positionTitle={this.state.work.positionTitle}
+            jobDesc={this.state.work.jobDesc}
+            workDateTo={this.state.work.workDateTo}
+            workDateFrom={this.state.work.workDateFrom}
           />
         </div>
       </div>

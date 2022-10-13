@@ -19,7 +19,7 @@ $red-button-colour: #dd1155;
   font-size: 1rem;
 }
 
-@mixin greenBtn {
+@mixin green-btn {
   cursor: pointer;
   background-color: $add-button-colour;
   padding: 10px;
@@ -28,6 +28,13 @@ $red-button-colour: #dd1155;
   border: none;
   border-radius: 5px;
   font-weight: bold;
+}
+
+@mixin dates-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
 }
 
 // @mixin underline {

@@ -1,0 +1,31 @@
+.work-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.work-form input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.work-form button {
+  cursor: pointer;
+  background-color: #00cc99;
+  padding: 10px;
+  color: white;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.work-form label {
+  color: white;
+  font-size: 1.1rem;
+}
+.work-form .work-dates-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}/*# sourceMappingURL=workForm.css.map */
