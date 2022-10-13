@@ -29,8 +29,26 @@
 }
 .cv-container .cv-education .title-study-text {
   color: #7a7a7a;
-  margin-top: -10px;
+  margin-top: -17px;
 }
 .cv-container .cv-work {
   padding: 20px;
+}
+.cv-container .cv-work h2 {
+  margin-bottom: -30px;
+}
+.cv-container .cv-work .cv-work-content-container {
+  display: flex;
+  justify-content: space-between;
+}
+.cv-container .cv-work .company-name-text {
+  font-size: 1.3rem;
+}
+.cv-container .cv-work .position-title-text {
+  color: #7a7a7a;
+  margin-top: -17px;
+}
+.cv-container .cv-work .job-desc-text {
+  width: 400px;
+  overflow-wrap: normal;
 }/*# sourceMappingURL=cv.css.map */
