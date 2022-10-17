@@ -75,7 +75,8 @@ class App extends React.Component {
         <EducationCV
           schoolName={this.state.education.schoolName}
           titleStudy={this.state.education.titleStudy}
-          dateStudy={this.state.education.dateStudy}
+          studyDateFrom={this.state.education.studyDateFrom}
+          studyDateTo={this.state.education.studyDateTo}
         />,
       ],
     }));
