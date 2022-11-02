@@ -56,6 +56,7 @@ class App extends React.Component {
     });
   }
 
+  // Updates the education information inside state - this is passed down to the add button for education inside the Form component
   educationInfoUpdate(e) {
     let schoolName = document.querySelector(".school-name").value;
     let titleStudy = document.querySelector(".title-study").value;
@@ -82,6 +83,7 @@ class App extends React.Component {
     }));
   }
 
+  // Updates the work information inside state - this is passed down to the add button for work inside the Form component
   workInfoUpdate(e) {
     let companyName = document.querySelector(".company-name").value;
     let positionTitle = document.querySelector(".position-title").value;
